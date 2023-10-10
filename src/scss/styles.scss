@@ -1,0 +1,12 @@
+$bg: #000;
+$fg: #fff;
+
+
+.cmp-body {
+    background: $bg;
+    color: $fg;
+
+    .banner {
+        display: block;
+    }
+}

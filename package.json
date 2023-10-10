@@ -1,0 +1,48 @@
+{
+  "name": "srti-sdk-poc",
+  "version": "1.0.0",
+  "description": "A poc example for cookie-consent sdk structure",
+  "main": "dist/index.cjs.js",
+  "type": "module",
+  "scripts": {
+    "dev": "rollup -c --watch",
+    "format": "prettier --write 'src/**/*.{js,ts,json}'",
+    "prelint": "npm run format",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "npm run lint -- --fix",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "build": "NODE_ENV=prod rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madhujayavarapu/srti-sdk-poc.git"
+  },
+  "keywords": [
+    "sdk",
+    "typescript-sdk",
+    "rollup"
+  ],
+  "author": "Madhu Jayavarapu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madhujayavarapu/srti-sdk-poc/issues"
+  },
+  "homepage": "https://github.com/madhujayavarapu/srti-sdk-poc#readme",
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@typescript-eslint/eslint-plugin": "^6.7.5",
+    "@typescript-eslint/parser": "^6.7.5",
+    "eslint": "^8.51.0",
+    "node-sass": "^9.0.0",
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.0.2",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-scss": "^4.0.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2"
+  }
+}
