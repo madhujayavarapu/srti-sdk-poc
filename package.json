@@ -6,8 +6,9 @@
   "type": "module",
   "scripts": {
     "dev": "rollup -c --watch",
+    "test:changes": "jest -o",
     "test": "jest",
-    "format": "prettier --write 'src/**/*.{js,ts,json}'",
+    "format": "prettier --write '**/*.{js,ts,json}'",
     "prelint": "npm run format",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "npm run lint -- --fix",
@@ -39,6 +40,7 @@
     "eslint": "^8.51.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
+    "jest-html-reporter": "^3.10.2",
     "node-sass": "^9.0.0",
     "prettier": "^3.0.3",
     "rimraf": "^5.0.5",
