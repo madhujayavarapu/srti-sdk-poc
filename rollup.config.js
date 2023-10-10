@@ -10,6 +10,8 @@ const version = '1.0.0';
 const outDir = 'dist';
 const filename = 'index';
 const isProduction = process.env.NODE_ENV === 'prod';
+
+// eslint-disable-next-line no-console
 console.log('Builds are generating for env:', process.env.NODE_ENV);
 
 // common output options
