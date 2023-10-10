@@ -1,5 +1,21 @@
+const isDevEnv = process.env.NODE_ENV === 'dev';
+
+// skip jest-html-reporter plugin only in dev env
+const prodOpts = {
+  reporters: [
+    'default',
+    isDevEnv && [
+      './node_modules/jest-html-reporter',
+      {
+        pageTitle: 'SDK Test Report',
+        outputPath: '<rootDir>/coverage/test-reports/sdk-report.html',
+      },
+    ],
+  ]
+};
+
 /** @type {import('ts-jest').JestConfigWithTsJest} */
-export default {
+let config = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
   transform: {
@@ -16,15 +32,14 @@ export default {
   },
   collectCoverage: true,
   coverageReporters: ['json', 'lcov', 'text', 'clover'],
-  reporters: [
-    'default',
-    [
-      './node_modules/jest-html-reporter',
-      {
-        pageTitle: 'SDK Test Report',
-        outputPath: '<rootDir>/coverage/test-reports/sdk-report.html',
-      },
-    ],
-  ],
   coverageDirectory: '<rootDir>/coverage',
 };
+
+if(!isDevEnv) {
+  config = {
+    ...config,
+    ...prodOpts
+  };
+}
+
+export default config;
