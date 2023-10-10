@@ -4,7 +4,7 @@ const isDevEnv = process.env.NODE_ENV === 'dev';
 const prodOpts = {
   reporters: [
     'default',
-    isDevEnv && [
+    [
       './node_modules/jest-html-reporter',
       {
         pageTitle: 'SDK Test Report',
