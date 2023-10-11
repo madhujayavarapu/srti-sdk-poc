@@ -11,7 +11,7 @@ const prodOpts = {
         outputPath: '<rootDir>/coverage/test-reports/sdk-report.html',
       },
     ],
-  ]
+  ],
 };
 
 /** @type {import('ts-jest').JestConfigWithTsJest} */
@@ -33,12 +33,20 @@ let config = {
   collectCoverage: true,
   coverageReporters: ['json', 'lcov', 'text', 'clover'],
   coverageDirectory: '<rootDir>/coverage',
+  coverageThreshold: {
+    global: {
+      branches: 80,
+      functions: 80,
+      lines: 75,
+      statements: 75
+    }
+  }
 };
 
-if(!isDevEnv) {
+if (!isDevEnv) {
   config = {
     ...config,
-    ...prodOpts
+    ...prodOpts,
   };
 }
 
