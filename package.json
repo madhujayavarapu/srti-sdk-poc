@@ -1,8 +1,9 @@
 {
-  "name": "srti-sdk-poc",
+  "name": "@mj/sdk-poc",
   "version": "1.0.0",
   "description": "A poc example for cookie-consent sdk structure",
   "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
   "type": "module",
   "scripts": {
     "dev": "rollup -c --watch",
@@ -17,6 +18,13 @@
     "prebuild": "npm run clean",
     "build": "NODE_ENV=prod rollup -c"
   },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "require": "./dist/index.cjs.js",
+    "default": "./dist/index.esm.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/madhujayavarapu/srti-sdk-poc.git"
@@ -24,7 +32,8 @@
   "keywords": [
     "sdk",
     "typescript-sdk",
-    "rollup"
+    "rollup",
+    "jest"
   ],
   "author": "Madhu Jayavarapu",
   "license": "ISC",
