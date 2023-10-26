@@ -4,13 +4,25 @@
     "declaration": true,
     "declarationDir": "./dist/@types",
     "declarationMap": true,
-    "module": "NodeNext",
+    "module": "ESNext",
     "target": "ES2015",
+    "moduleResolution": "node",
     "strict": true,
     "esModuleInterop": true,
     "allowUnreachableCode": false,
     "noImplicitAny": false,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "src",
+    "paths": {
+      "@plugins/*": ["/plugins/*"],
+      "@constants/*": ["/constants/*"],
+      "@templates/*": ["/templates/*"],
+      "@core/*": ["/core/*"],
+      "@phases/*": ["/phases/*"],
+      "@errors/*": ["/errors/*"],
+      "@utils/*": ["/utils/*"]
+    },
+    "typeRoots": ["./src/types", "./node_modules/@types"]
   },
   "include": ["src/**/*"],
   "exclude": ["src/**/*.spec.ts", "src/**/*.test.ts", "node_modules"]

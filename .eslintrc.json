@@ -2,6 +2,11 @@
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "tsconfigRootDir": "."
+  },
+  "root": true,
   "rules": {
     "indent": ["warn", 2], // Use 2 spaces for indentation
     "quotes": ["warn", "single"], // Use single quotes for strings
