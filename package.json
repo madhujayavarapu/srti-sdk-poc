@@ -35,6 +35,9 @@
     "rollup",
     "jest"
   ],
+  "engines": {
+    "node": ">18.10.0"
+  },
   "author": "Madhu Jayavarapu",
   "license": "ISC",
   "bugs": {
