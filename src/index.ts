@@ -1,4 +1,5 @@
 import { bootstrap } from 'core/bootstrap';
+import { DOM } from 'utils/dom';
 import './scss/styles.scss';
 
 
@@ -15,6 +16,12 @@ function initalize(opts: any) {
   // bootstrap sdk.
   // TODO: build context and return context.
   bootstrap();
+
+  // Dummy node to test whether sdk is loaded without errors or not.
+  // const div = document.createElement('div');
+
+  // Create banner.
+  DOM.createBanner();
 } 
 
 
