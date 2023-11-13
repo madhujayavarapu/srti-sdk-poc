@@ -24,27 +24,27 @@ export class State implements IState {
     this.versionConfig = DEFAULT_VERSION_CONFIG;
   }
 
-  setOptions(opts: IOptions) {
-    this.options = opts;
-  }
+  // setOptions(opts: IOptions) {
+  //   this.options = opts;
+  // }
 
-  getOptions(): IOptions {
-    return this.options;
-  }
+  // getOptions(): IOptions {
+  //   return this.options;
+  // }
 
-  setScriptAttrs(scriptAttrs: IScriptAttributes) {
-    this.scriptAttrs = scriptAttrs;
-  }
+  // setScriptAttrs(scriptAttrs: IScriptAttributes) {
+  //   this.scriptAttrs = scriptAttrs;
+  // }
 
-  getScriptAttrs() {
-    return this.scriptAttrs;
-  }
+  // getScriptAttrs() {
+  //   return this.scriptAttrs;
+  // }
 
-  setDomainConfig(domainConfig: IDomainConfig) {
-    this.domainConfig = domainConfig;
-  }
+  // setDomainConfig(domainConfig: IDomainConfig) {
+  //   this.domainConfig = domainConfig;
+  // }
 
-  getDomainConfig(): IDomainConfig {
-    return this.domainConfig;
-  }
+  // getDomainConfig(): IDomainConfig {
+  //   return this.domainConfig;
+  // }
 }
