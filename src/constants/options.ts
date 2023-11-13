@@ -1,4 +1,4 @@
-import { IOptions, IVersionConfig } from './../types';
+import { IOptions, IVersionConfig } from 'types';
 
 export const DEFAULT_OPTIONS: IOptions = {
   implicitFlow: true,
