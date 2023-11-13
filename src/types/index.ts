@@ -38,6 +38,7 @@ export interface IDomainConfig {}
 
 
 export interface IState {
+    valid: boolean;
     scriptAttrs: IScriptAttributes;
     versionConfig: IVersionConfig;
     domainConfig: IDomainConfig;
@@ -45,9 +46,10 @@ export interface IState {
 }
 
 export interface ILogger {
-    log(): void;
-    fatal(): void;
+    info(): void;
+    warn(): void;
     error(): void;
+    fatal(): void;
 }
 
 export interface IContext {
