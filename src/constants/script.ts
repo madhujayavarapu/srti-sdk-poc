@@ -1,3 +1,5 @@
+import { IScriptAttributes } from 'types';
+
 export const SCRIPT_TAG_SELECTOR = 'script[data-domain-uuid]';
 
 export const ATTRIBUTES = {
@@ -14,5 +16,16 @@ export const ATTRIBUTES = {
 export const REQUIRED_ATTRIBUTES = [
   ATTRIBUTES.TENANT_UUID,
   ATTRIBUTES.DOMAIN_UUID,
-  ATTRIBUTES.BASE_URL
+  ATTRIBUTES.BASE_URL,
 ];
+
+export const DEFAULT_SCRIPT_ATTRS: IScriptAttributes = {
+  tenantUUID: null,
+  domainUUID: null,
+  baseUrl: 'https://dev.securiti.xyz/',
+  cdnBaseUrl: 'https://cdn-dev.securiti.xyz/consent',
+  publishedVersion: '',
+  skipCSS: false,
+  stagingMode: false,
+  loadUtils: false,
+};

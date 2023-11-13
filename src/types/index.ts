@@ -24,8 +24,8 @@ export interface IScriptAttributes {
     // domainUUID: UUID;
     // baseUrl: URL;
     // cdnBaseUrl: URL;
-    tenantUUID: string;
-    domainUUID: string;
+    tenantUUID: string | null;
+    domainUUID: string | null;
     baseUrl: string;
     cdnBaseUrl: string;
     publishedVersion: string;
